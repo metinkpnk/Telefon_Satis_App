@@ -1,0 +1,331 @@
+<Window x:Class="TelefonSatısApp.TaksitliSatisPenceresi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Taksitli Satış" Height="682" Width="520"
+        WindowStartupLocation="CenterScreen"
+        Background="#0F172A"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="#2563EB"/>
+        <SolidColorBrush x:Key="PrimaryDarkBrush" Color="#1E3A8A"/>
+        <SolidColorBrush x:Key="CardBrush" Color="#111827"/>
+        <SolidColorBrush x:Key="TextLight" Color="#E5E7EB"/>
+        <SolidColorBrush x:Key="TextMuted" Color="#94A3B8"/>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="44"/>
+            <Setter Property="Padding" Value="12,8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource PrimaryDarkBrush}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#172554"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#0F172A"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="BorderBrush" Value="#1E293B"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="0,4,0,10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+        <!-- DatePicker Stili -->
+        <Style TargetType="DatePicker">
+            <Setter Property="Background" Value="#0F172A"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="BorderBrush" Value="#1E293B"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0,4,0,10"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="DatePicker">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="8">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <DatePickerTextBox x:Name="PART_TextBox"
+                                                   Grid.Column="0"
+                                                   Background="Transparent"
+                                                   Foreground="{StaticResource TextLight}"
+                                                   BorderThickness="0"
+                                                   Padding="8,0"
+                                                   VerticalAlignment="Center"
+                                                   FontSize="{TemplateBinding FontSize}"/>
+                                
+                                <Button x:Name="PART_Button"
+                                        Grid.Column="1"
+                                        Width="30"
+                                        Height="30"
+                                        Background="Transparent"
+                                        BorderThickness="0"
+                                        Margin="0,0,5,0">
+                                    <TextBlock Text="📅" FontSize="16" Foreground="{StaticResource TextMuted}"/>
+                                </Button>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- ComboBox Stili -->
+        <Style TargetType="ComboBox">
+            <Setter Property="Background" Value="#0F172A"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="BorderBrush" Value="#1E293B"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0,4,0,10"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <!-- Ana border -->
+                            <Border Grid.ColumnSpan="2"
+                                    Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="8"/>
+                            
+                            <!-- Content -->
+                            <ContentPresenter x:Name="ContentSite"
+                                              Grid.Column="0"
+                                              Content="{TemplateBinding SelectionBoxItem}"
+                                              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                              Margin="10,0"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Left"
+                                              IsHitTestVisible="False"/>
+                            
+                            <!-- Dropdown button -->
+                            <ToggleButton x:Name="ToggleButton"
+                                          Grid.Column="1"
+                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+                                          Focusable="False"
+                                          ClickMode="Press"
+                                          Background="Transparent"
+                                          BorderThickness="0">
+                                <TextBlock Text="🔽" FontSize="12" Foreground="{StaticResource TextMuted}"/>
+                            </ToggleButton>
+                            
+                            <!-- Popup -->
+                            <Popup x:Name="Popup"
+                                   Placement="Bottom"
+                                   IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   AllowsTransparency="True"
+                                   Focusable="False"
+                                   StaysOpen="False">
+                                <Border Background="#0F172A"
+                                        BorderBrush="#1E293B"
+                                        BorderThickness="1"
+                                        CornerRadius="8"
+                                        Padding="4"
+                                        MinWidth="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}">
+                                    <ScrollViewer>
+                                        <ItemsPresenter/>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                        
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- ComboBoxItem Stili -->
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}"
+                                CornerRadius="4"
+                                Margin="2">
+                            <ContentPresenter/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#1E293B"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,0,0,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56"/>
+            <RowDefinition Height="623*"/>
+            <RowDefinition Height="162*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Üst bar -->
+        <Border Grid.Row="0" Background="#0B1221">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="44"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="14,0">
+                    <Ellipse Width="10" Height="10" Fill="{StaticResource PrimaryBrush}" Margin="0,0,10,0"/>
+                    <TextBlock Text="Taksitli Satış" FontSize="16" FontWeight="Bold" Foreground="{StaticResource TextLight}"/>
+                    <TextBlock x:Name="TxtTelefonBilgi" Margin="10,0,0,0" Foreground="{StaticResource TextMuted}" />
+                </StackPanel>
+                <Button Grid.Column="1"
+                        Content="✕"
+                        Width="32"
+                        Height="32"
+                        Background="Transparent"
+                        Foreground="#F87171"
+                        BorderThickness="0"
+                        Click="CloseButton_Click"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Margin="14,14,14,0" Padding="16" Background="{StaticResource CardBrush}" CornerRadius="12" Grid.RowSpan="2">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,0,0,-16">
+                <StackPanel>
+                    <TextBlock Text="Müşteri Adı Soyadı" Foreground="{StaticResource TextMuted}" Margin="0,0,0,4"/>
+                    <TextBox x:Name="TxtMusteriAdSoyad"/>
+
+                    <TextBlock Text="Telefon 1" Foreground="{StaticResource TextMuted}" Margin="0,4,0,4"/>
+                    <TextBox x:Name="TxtTelefon1" ToolTip="Zorunlu alan"/>
+
+                    <TextBlock Text="Telefon 2 (opsiyonel)" Foreground="{StaticResource TextMuted}" Margin="0,4,0,4"/>
+                    <TextBox x:Name="TxtTelefon2"/>
+
+                    <TextBlock Text="Satış Tarihi" Foreground="{StaticResource TextMuted}" Margin="0,4,0,4"/>
+                    <DatePicker x:Name="DpSatisTarihi"/>
+
+                    <TextBlock Text="Taksit Başlangıç Tarihi" Foreground="{StaticResource TextMuted}" Margin="0,4,0,4"/>
+                    <DatePicker x:Name="DpTaksitBaslangic"/>
+
+                    <TextBlock Text="Satış Fiyatı" Foreground="{StaticResource TextMuted}" Margin="0,4,0,4"/>
+                    <TextBox x:Name="TxtSatisFiyati" TextChanged="TxtSatisFiyati_TextChanged"/>
+
+                    <TextBlock Text="Ön Ödeme (opsiyonel)" Foreground="{StaticResource TextMuted}" Margin="0,4,0,4"/>
+                    <TextBox x:Name="TxtOnOdeme" TextChanged="TxtOnOdeme_TextChanged" Text="0"/>
+
+                    <TextBlock Text="Taksit Sayısı (1-6)" Foreground="{StaticResource TextMuted}" Margin="0,4,0,4"/>
+                    <ComboBox x:Name="CbTaksitSayisi" SelectionChanged="CbTaksitSayisi_SelectionChanged" SelectedIndex="0">
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+                        <ComboBoxItem Content="3"/>
+                        <ComboBoxItem Content="4"/>
+                        <ComboBoxItem Content="5"/>
+                        <ComboBoxItem Content="6"/>
+                    </ComboBox>
+
+                    <Border Background="#0B1221" CornerRadius="10" Padding="12" Margin="0,4,0,12">
+                        <StackPanel>
+                            <TextBlock Text="Ödeme Detayları" Foreground="{StaticResource TextMuted}" FontWeight="SemiBold"/>
+                            <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                                <TextBlock Text="Ön Ödeme: " Foreground="{StaticResource TextMuted}"/>
+                                <TextBlock x:Name="TxtOnOdemeGoster" Text="0 ₺" Foreground="#22C55E" FontWeight="SemiBold"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,2,0,0">
+                                <TextBlock Text="Kalan Tutar: " Foreground="{StaticResource TextMuted}"/>
+                                <TextBlock x:Name="TxtKalanTutar" Text="0 ₺" Foreground="#F59E0B" FontWeight="SemiBold"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                                <TextBlock Text="Aylık Ödeme: " Foreground="{StaticResource TextMuted}"/>
+                                <TextBlock x:Name="TxtAylikOdeme" Text="0 ₺" Foreground="#38BDF8" FontSize="16" FontWeight="SemiBold"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Kaydet" Width="120" Click="Kaydet_Click"/>
+                        <Button Content="İptal" Width="100" Margin="10,0,0,0" Background="#EF4444" Click="CloseButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>
+
