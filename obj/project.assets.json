@@ -372,11 +372,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mtnke\\source\\repos\\TelefonSatısApp\\TelefonSatısApp.csproj",
+      "projectUniqueName": "C:\\Users\\mtnke\\OneDrive\\Desktop\\Projeler\\Telefon_Satis_App\\TelefonSatısApp.csproj",
       "projectName": "TelefonSatısApp",
-      "projectPath": "C:\\Users\\mtnke\\source\\repos\\TelefonSatısApp\\TelefonSatısApp.csproj",
+      "projectPath": "C:\\Users\\mtnke\\OneDrive\\Desktop\\Projeler\\Telefon_Satis_App\\TelefonSatısApp.csproj",
       "packagesPath": "C:\\Users\\mtnke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mtnke\\source\\repos\\TelefonSatısApp\\obj\\",
+      "outputPath": "C:\\Users\\mtnke\\OneDrive\\Desktop\\Projeler\\Telefon_Satis_App\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -437,8 +437,24 @@
         "warn": true,
         "downloadDependencies": [
           {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
+          },
+          {
             "name": "Microsoft.Windows.SDK.NET.Ref",
             "version": "[10.0.19041.57, 10.0.19041.57]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.23, 8.0.23]"
           }
         ],
         "frameworkReferences": {
@@ -452,7 +468,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

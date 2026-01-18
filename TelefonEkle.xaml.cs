@@ -122,14 +122,14 @@ namespace TelefonSatısApp
                         cmd.Parameters.AddWithValue("@Marka", marka);
                         var model = CbModel.Text ?? "";
                         cmd.Parameters.AddWithValue("@Model", model);
-                        string renk = (CbRenk.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "";
+                        string renk = CbRenk.Text ?? "";
                         cmd.Parameters.AddWithValue("@Renk", renk);
                         cmd.Parameters.AddWithValue("@GarantiAy", CbGarantiAy.SelectedItem ?? 0);
                         cmd.Parameters.AddWithValue("@CikisYili", int.TryParse(CbCikisYili.Text, out var cy) ? cy : 0);
                         double alinanFiyat = double.TryParse(TxtAlinanFiyat.Text.Replace(".", "").Replace(",", ""), out var a) ? a : 0;
                         cmd.Parameters.AddWithValue("@AlinanFiyat", alinanFiyat);
 
-                        string durumSecim = (CbDurum.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "";
+                        string durumSecim = CbDurum.Text ?? "";
                         cmd.Parameters.AddWithValue("@Durum", NormalizeDurum(durumSecim));
 
                         cmd.ExecuteNonQuery();
@@ -149,7 +149,7 @@ namespace TelefonSatısApp
                         giderCmd.Parameters.AddWithValue("@Model", model);
                         var marka = CbMarka.Text ?? "";
                         giderCmd.Parameters.AddWithValue("@Marka", marka);
-                        string renk = (CbRenk.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "";
+                        string renk = CbRenk.Text ?? "";
                         giderCmd.Parameters.AddWithValue("@Renk", renk);
                         double alinanFiyat = double.TryParse(TxtAlinanFiyat.Text.Replace(".", "").Replace(",", ""), out var a) ? a : 0;
                         giderCmd.Parameters.AddWithValue("@AlinanFiyat", alinanFiyat);

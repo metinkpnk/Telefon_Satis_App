@@ -292,7 +292,7 @@
                                   IsEditable="True"/>
 
                         <TextBlock Text="Renk" Foreground="{StaticResource TextMuted}" Margin="0,10,0,4"/>
-                        <ComboBox x:Name="CbRenk">
+                        <ComboBox x:Name="CbRenk" IsEditable="True">
                             <ComboBoxItem Content="Açık Mavi"/>
                             <ComboBoxItem Content="Açık Sarı"/>
                             <ComboBoxItem Content="Açık Yeşil"/>
@@ -316,7 +316,7 @@
                         </ComboBox>
 
                         <TextBlock Text="Durum" Foreground="{StaticResource TextMuted}" Margin="0,10,0,4"/>
-                        <ComboBox x:Name="CbDurum">
+                        <ComboBox x:Name="CbDurum" IsEditable="True">
                             <ComboBoxItem Content="Sıfır"/>
                             <ComboBoxItem Content="İkinci El"/>
                         </ComboBox>

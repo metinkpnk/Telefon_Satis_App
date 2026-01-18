@@ -1,239 +1,265 @@
 # 📱 Telefon Satış Uygulaması
 
-Modern ve kullanıcı dostu bir telefon satış yönetim sistemi. Bu uygulama, telefon satış işletmeleri için envanter yönetimi, satış takibi, taksit yönetimi ve gelir-gider analizi gibi temel işlevleri sunar.
+Modern ve kullanıcı dostu bir telefon satış yönetim sistemi. Bu WPF uygulaması, telefon satış işletmeleri için envanter yönetimi, satış takibi, taksit yönetimi ve finansal analiz gibi temel işlevleri sunar.
 
-## 🚀 Özellikler
+![Logo](Resources/logo.jpg)
+
+## 🚀 Temel Özellikler
 
 ### 📋 Envanter Yönetimi
-- **Telefon Ekleme/Düzenleme/Silme**: Detaylı telefon bilgileri (IMEI, marka, model, renk, garanti süresi)
-- **Akıllı Arama**: IMEI, marka ve model bazında hızlı arama
-- **Excel Dışa Aktarım**: Envanter listesini Excel formatında dışa aktarma
-- **Durum Takibi**: Sıfır/İkinci el telefon durumu yönetimi
+- **Telefon Kayıt Sistemi**: IMEI, marka, model, renk, garanti bilgileri
+- **Akıllı Arama ve Filtreleme**: Hızlı telefon bulma
+- **Durum Takibi**: Sıfır/İkinci el telefon yönetimi
+- **Excel Dışa Aktarım**: Envanter raporları
 
-### 💰 Satış Yönetimi
-- **Peşin Satış**: Anında ödeme ile satış işlemleri
-- **Taksitli Satış**: Esnek taksit planları ile satış
-- **Müşteri Bilgileri**: Detaylı müşteri kayıt sistemi
-- **Satış Geçmişi**: Tüm satış işlemlerinin takibi
+### 💰 Satış İşlemleri
+- **Peşin Satış**: Anında ödeme ile satış
+- **Taksitli Satış**: Esnek taksit planları (1-6 ay)
+- **Müşteri Yönetimi**: Detaylı müşteri bilgileri
+- **Kar Hesaplama**: Otomatik kar marjı analizi
 
-### 📅 Taksit Takip Sistemi
-- **Ödeme Takibi**: Taksit ödemelerinin durumu ve vade tarihleri
-- **Hatırlatmalar**: Bugün vadesi gelen ödemeler için otomatik hatırlatma
-- **Not Sistemi**: Her müşteri için özel notlar
-- **Ödeme İşaretleme**: Tek tıkla ödeme durumu güncelleme
+### 📅 Taksit Yönetimi
+- **Ödeme Takibi**: Taksit durumları ve vade tarihleri
+- **Hatırlatma Sistemi**: Bugün vadesi gelen ödemeler
+- **Ödeme İşaretleme**: Tek tıkla ödeme güncelleme
+- **Müşteri Notları**: Her müşteri için özel notlar
 
-### 📊 Gelir-Gider Analizi
-- **Detaylı Raporlar**: Dönemsel gelir-gider analizi
-- **Kar Hesaplama**: Otomatik kar marjı hesaplama
-- **Grafik Gösterimler**: Görsel analiz araçları
-- **Dışa Aktarım**: Raporları CSV formatında kaydetme
-
-### 🔔 Bildirim Sistemi
-- **Vade Takibi**: Bugün vadesi gelen ödemeler
-- **Geciken Taksitler**: Vadesi geçmiş ödemeler
-- **Özet Bilgiler**: Hızlı durum özeti
+### 📊 Raporlama ve Analiz
+- **Gelir-Gider Analizi**: Dönemsel finansal raporlar
+- **Satış İstatistikleri**: Detaylı satış analizleri
+- **Kar Marjı Takibi**: Karlılık hesaplamaları
+- **Dışa Aktarım**: CSV ve Excel formatları
 
 ## 🖥️ Ekran Görüntüleri
 
-### Ana Sayfa
-Ana sayfa, telefon envanterini görüntülemenizi ve yönetmenizi sağlar:
-- Telefon listesi ve arama özelliği
+### Ana Sayfa - Telefon Envanteri
+Ana sayfa, telefon stokunuzu yönetmenizi ve hızlı işlemler yapmanızı sağlar.
+
+![Ana Sayfa](Resources/images/anasayfa.png)
+
+**Özellikler:**
+- Telefon listesi ve detaylı görünüm
+- Arama ve filtreleme seçenekleri
 - Hızlı işlem butonları (Ekle, Güncelle, Sil)
-- Peşin ve taksitli satış seçenekleri
+- Peşin ve taksitli satış başlatma
 - Bugünkü hatırlatmalar paneli
-- Canlı saat gösterimi
 
-### Telefon Ekleme/Düzenleme
-Yeni telefon ekleme veya mevcut telefon bilgilerini güncelleme:
-- IMEI numarası girişi
-- Marka ve model seçimi (önceden tanımlı listeler)
-- Renk, garanti süresi ve çıkış yılı bilgileri
-- Alış fiyatı ve durum bilgisi
+### Peşin Satışlar
+Nakit ödemeli satış işlemlerinin yönetimi.
 
-### Satış İşlemleri
-#### Peşin Satış
+![Peşin Satışlar](Resources/images/pesinsatıslar.png)
+
+**Özellikler:**
 - Müşteri bilgileri girişi
 - Satış fiyatı belirleme
-- Kar hesaplama
-- Anında satış tamamlama
+- Otomatik kar hesaplama
+- Satış geçmişi görüntüleme
+- Excel dışa aktarım
 
-#### Taksitli Satış
-- Taksit sayısı belirleme
-- Ön ödeme tutarı
+### Taksitli Satışlar
+Taksitli ödeme planları ile satış yönetimi.
+
+![Taksitli Satışlar](Resources/images/taksitlisatıslar.png)
+
+**Özellikler:**
+- Taksit sayısı belirleme (1-6 ay)
+- Ön ödeme tutarı girişi
 - Aylık ödeme hesaplama
+- Müşteri iletişim bilgileri
 - Taksit takvimi oluşturma
 
-### Taksit Takip
-Taksitli satışların yönetimi:
-- Müşteri bazında taksit görüntüleme
-- Ödeme durumu güncelleme
-- Not ekleme ve düzenleme
-- Arama ve filtreleme
+### Taksit Takip Sistemi
+Taksitli satışların ödeme durumlarının takibi.
 
-### Bildirimler
-Ödeme hatırlatmaları ve durum bilgileri:
-- Bugünkü ödemeler listesi
-- Geciken taksitler
+![Taksit Takip](Resources/images/taksittakip.png)
+
+**Özellikler:**
+- Müşteri bazında taksit görüntüleme
+- Ödeme durumu güncelleme (Ödendi/Ödenmedi)
+- Vade tarihi takibi
+- Müşteri notları ekleme
+- Geciken ödemeler vurgulama
+
+### Bildirimler ve Hatırlatmalar
+Önemli ödeme hatırlatmaları ve durum bilgileri.
+
+![Bildirimler](Resources/images/bildirimler.png)
+
+**Özellikler:**
+- Bugün vadesi gelen ödemeler
+- Geciken taksitler listesi
 - Yaklaşan vadeler
 - Özet istatistikler
+- Hızlı erişim linkleri
 
-### Gelir-Gider Raporu
-Finansal analiz araçları:
-- Dönemsel gelir analizi
-- Gider takibi
-- Kar marjı hesaplama
-- Detaylı raporlama
-
-## 🛠️ Teknik Özellikler
+## 🛠️ Teknik Bilgiler
 
 ### Teknoloji Stack
-- **Framework**: .NET WPF (Windows Presentation Foundation)
-- **Dil**: C# 
+- **Framework**: .NET 8.0 WPF
+- **Programlama Dili**: C#
 - **Veritabanı**: SQLite
-- **UI Framework**: Modern WPF tasarımı
-- **Excel İşlemleri**: ClosedXML kütüphanesi
+- **UI**: Modern WPF tasarımı
+- **Kütüphaneler**: System.Data.SQLite
 
 ### Sistem Gereksinimleri
-- **İşletim Sistemi**: Windows 10 veya üzeri
-- **.NET Framework**: .NET 6.0 veya üzeri
+- **İşletim Sistemi**: Windows 10/11 (64-bit)
+- **.NET Runtime**: .NET 8.0 veya üzeri
 - **RAM**: Minimum 4GB
-- **Disk Alanı**: 100MB boş alan
+- **Disk Alanı**: 200MB boş alan
+- **Ekran Çözünürlüğü**: 1024x768 veya üzeri
 
 ### Veritabanı Yapısı
 ```sql
--- Telefonlar tablosu
-Telefonlar (Id, Imei, Marka, Model, Renk, GarantiAy, CikisYili, AlinanFiyat, Durum)
-
--- Peşin satışlar
-PesinSatislar (Id, MusteriAd, MusteriSoyad, MusteriTelefon, Marka, Model, SatisFiyati, Kar, Tarih)
-
--- Taksitli satışlar
+-- Ana tablolar
+Telefonlar (Id, Imei, Model, Marka, Renk, GarantiAy, CikisYili, AlinanFiyat, Durum)
+PesinSatislar (Id, TelefonId, MusteriAd, MusteriSoyad, MusteriTelefon, SatisFiyati, Kar, Tarih)
 TaksitliSatislar (Id, TelefonId, MusteriAd, MusteriSoyad, Telefon1, Telefon2, TaksitSayisi, SatisFiyati, OnOdeme, AylikOdeme, Tarih)
-
--- Taksit ödemeleri
 TaksitOdemeleri (Id, TaksitliSatisId, TaksitNo, VadeTarihi, Odendi, OdemeTarihi)
+TelefonAlislari (Id, TelefonId, Imei, Model, Marka, Renk, AlinanFiyat, Tarih)
 ```
 
-## 📦 Kurulum
+## 📦 Kurulum ve Çalıştırma
 
 ### Geliştirici Kurulumu
-1. **Projeyi klonlayın**:
-   ```bash
-   git clone [repository-url]
-   cd TelefonSatısApp
-   ```
+```bash
+# Projeyi klonlayın
+git clone [repository-url]
+cd TelefonSatısApp
 
-2. **Gerekli paketleri yükleyin**:
-   ```bash
-   dotnet restore
-   ```
+# Bağımlılıkları yükleyin
+dotnet restore
 
-3. **Uygulamayı çalıştırın**:
-   ```bash
-   dotnet run
-   ```
+# Uygulamayı derleyin
+dotnet build
 
-### Son Kullanıcı Kurulumu
-1. `publish` klasöründen setup dosyasını indirin
-2. Setup dosyasını çalıştırın
-3. Kurulum talimatlarını takip edin
-4. Uygulamayı başlatın
+# Uygulamayı çalıştırın
+dotnet run
+```
+
+### Yayın Sürümü Oluşturma
+```bash
+# Windows için yayın sürümü
+dotnet publish -c Release -r win-x64 --self-contained true
+
+# Çıktı klasörü: bin/Release/net8.0-windows/win-x64/publish/
+```
+
+### İlk Kurulum
+1. Uygulamayı ilk kez çalıştırdığınızda SQLite veritabanı otomatik oluşturulur
+2. `Data/telefonlar.db` dosyası uygulama klasöründe saklanır
+3. Örnek telefon verileri otomatik olarak yüklenir (20 adet)
 
 ## 🎯 Kullanım Kılavuzu
 
-### İlk Kurulum
-1. Uygulamayı ilk kez açtığınızda veritabanı otomatik olarak oluşturulur
-2. Ana sayfada telefon ekleme işlemini başlatabilirsiniz
-3. Temel ayarları yapılandırın
-
 ### Telefon Ekleme
-1. Ana sayfada "Telefon Ekle" butonuna tıklayın
-2. IMEI numarasını girin
-3. Marka ve model seçin
-4. Diğer bilgileri doldurun
-5. "Kaydet" butonuna tıklayın
+1. Ana sayfada **"Telefon Ekle"** butonuna tıklayın
+2. IMEI numarasını girin (15 haneli)
+3. Marka ve model bilgilerini seçin
+4. Renk, garanti süresi ve çıkış yılını belirleyin
+5. Alış fiyatını girin
+6. **"Kaydet"** butonuna tıklayın
 
-### Satış İşlemi
+### Peşin Satış İşlemi
 1. Satılacak telefonu listeden seçin
-2. "Peşin Satış" veya "Taksitli Satış" butonuna tıklayın
-3. Müşteri bilgilerini girin
-4. Satış koşullarını belirleyin
+2. **"Peşin Satış"** butonuna tıklayın
+3. Müşteri bilgilerini doldurun
+4. Satış fiyatını belirleyin (kar otomatik hesaplanır)
 5. Satışı tamamlayın
 
+### Taksitli Satış İşlemi
+1. Telefonu seçin ve **"Taksitli Satış"** butonuna tıklayın
+2. Müşteri bilgilerini girin (2 telefon numarası)
+3. Taksit sayısını seçin (1-6 ay)
+4. Satış fiyatı ve ön ödeme tutarını belirleyin
+5. Aylık ödeme otomatik hesaplanır
+6. Satışı tamamlayın
+
 ### Taksit Takibi
-1. "Taksit Takip" sayfasına gidin
+1. **"Taksit Takip"** sayfasına gidin
 2. Müşteri listesinden ilgili kişiyi bulun
 3. Taksit butonlarına tıklayarak ödeme durumunu güncelleyin
-4. Gerekirse not ekleyin
+4. Gerekirse müşteri notu ekleyin
+5. Arama özelliği ile hızlı müşteri bulma
 
-## 🔧 Yapılandırma
+## 🔧 Yapılandırma ve Yedekleme
 
-### Veritabanı Ayarları
-Uygulama SQLite veritabanı kullanır ve otomatik olarak yapılandırılır. Veritabanı dosyası uygulama klasöründe `telefon_satis.db` adıyla saklanır.
+### Veritabanı Yönetimi
+- **Konum**: `Data/telefonlar.db`
+- **Otomatik Yedekleme**: Henüz mevcut değil
+- **Manuel Yedekleme**: Veritabanı dosyasını kopyalayın
 
-### Yedekleme
-Düzenli olarak veritabanı dosyasını yedeklemeniz önerilir:
-- Veritabanı konumu: `[Uygulama Klasörü]/telefon_satis.db`
-- Manuel yedekleme: Dosyayı kopyalayın
-- Otomatik yedekleme: Gelecek sürümlerde eklenecek
+### Güvenlik
+- Veritabanı şifrelenmemiştir
+- Hassas veriler için ek güvenlik önlemleri alın
+- Düzenli yedekleme yapın
 
-## 🤝 Katkıda Bulunma
+## 🐛 Sorun Giderme
 
-Bu proje açık kaynak değildir, ancak önerilerinizi ve geri bildirimlerinizi memnuniyetle karşılarız.
+### Sık Karşılaşılan Sorunlar
 
-### Hata Bildirimi
-Hata bulduğunuzda lütfen aşağıdaki bilgileri paylaşın:
-- Hata açıklaması
-- Adım adım tekrar etme yöntemi
-- Ekran görüntüleri (varsa)
-- Sistem bilgileri
+**Uygulama açılmıyor**
+- .NET 8.0 Runtime'ın yüklü olduğundan emin olun
+- Windows güncellemelerini kontrol edin
 
-## 📞 Destek
+**Veritabanı hatası**
+- `Data` klasörünün yazma izinleri olduğunu kontrol edin
+- Veritabanı dosyasının bozuk olmadığını kontrol edin
 
-### Teknik Destek
-- **E-posta**: [destek-email]
-- **Telefon**: [destek-telefon]
-- **Çalışma Saatleri**: Pazartesi-Cuma 09:00-18:00
+**Taksit hesaplamaları yanlış**
+- Satış fiyatı ve ön ödeme tutarlarını kontrol edin
+- Taksit sayısının doğru seçildiğinden emin olun
 
-### Sık Sorulan Sorular
+## 📈 Gelecek Özellikler
 
-**S: Veritabanım bozuldu, ne yapmalıyım?**
-A: Yedek dosyanızı geri yükleyin veya teknik destek ile iletişime geçin.
-
-**S: Excel dışa aktarım çalışmıyor?**
-A: Microsoft Excel'in yüklü olduğundan emin olun veya CSV formatını kullanın.
-
-**S: Taksit hesaplamaları yanlış görünüyor?**
-A: Satış fiyatı ve ön ödeme tutarlarını kontrol edin, gerekirse satışı düzenleyin.
-
-## 📄 Lisans
-
-Bu yazılım ticari bir üründür. Kullanım koşulları için lisans sözleşmesini inceleyiniz.
-
-## 🔄 Sürüm Geçmişi
-
-### v1.0.0 (Mevcut)
-- ✅ Temel envanter yönetimi
-- ✅ Peşin ve taksitli satış
-- ✅ Taksit takip sistemi
-- ✅ Bildirim sistemi
-- ✅ Gelir-gider raporları
-- ✅ Excel dışa aktarım
-
-### Gelecek Sürümler
-- 🔄 Otomatik yedekleme sistemi
+### Planlanan Geliştirmeler
+- 🔄 Otomatik veritabanı yedekleme
 - 🔄 SMS hatırlatma entegrasyonu
-- 🔄 Gelişmiş raporlama
+- 🔄 Gelişmiş raporlama ve grafikler
 - 🔄 Çoklu kullanıcı desteği
 - 🔄 Bulut senkronizasyonu
+- 🔄 Mobil uygulama entegrasyonu
+- 🔄 Barkod okuyucu desteği
 
-## 📊 İstatistikler
+### Önerilen İyileştirmeler
+- Veritabanı şifreleme
+- Kullanıcı yetkilendirme sistemi
+- Gelişmiş arama filtreleri
+- Toplu işlem özellikleri
 
-- **Kod Satırı**: ~5000+ satır
-- **Dosya Sayısı**: 25+ dosya
-- **Özellik Sayısı**: 15+ ana özellik
-- **Desteklenen Format**: Excel, CSV
+## 📞 Destek ve İletişim
+
+### Teknik Destek
+Bu uygulama açık kaynak bir proje değildir. Teknik destek için:
+- Hata raporları ve öneriler için GitHub Issues kullanın
+- Detaylı hata açıklaması ve ekran görüntüleri paylaşın
+
+### Katkıda Bulunma
+Proje kapalı kaynak olduğu için doğrudan kod katkısı mümkün değildir, ancak:
+- Önerilerinizi paylaşabilirsiniz
+- Hata raporları gönderebilirsiniz
+- Kullanım deneyimlerinizi paylaşabilirsiniz
+
+## 📄 Lisans ve Telif Hakkı
+
+Bu yazılım özel mülkiyettir. Ticari kullanım için lisans gereklidir.
+
+**© 2024 Telefon Satış Uygulaması. Tüm hakları saklıdır.**
 
 ---
 
-**© 2024 Telefon Satış Uygulaması. Tüm hakları saklıdır.**
+## 📊 Proje İstatistikleri
+
+- **Kod Satırı**: ~3,000+ satır C#
+- **Dosya Sayısı**: 30+ dosya
+- **Ana Özellik**: 12+ temel özellik
+- **Veritabanı Tablosu**: 5 ana tablo
+- **Desteklenen Format**: SQLite, CSV
+
+### Sürüm Bilgisi
+- **Mevcut Sürüm**: v1.0.0
+- **Son Güncelleme**: 2024
+- **Uyumluluk**: Windows 10/11, .NET 8.0
+
+---
+
+*Bu README dosyası uygulamanın mevcut durumunu yansıtmaktadır. Güncellemeler için düzenli olarak kontrol edin.*

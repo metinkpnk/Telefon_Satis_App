@@ -312,7 +312,6 @@
         </Border>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,16,10,16" VerticalAlignment="Top">
-            <!-- Yenile ve Excel Butonları -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                 <Button Click="Button_Yenile"
                         Background="#0EA5E9"
