@@ -2,8 +2,6 @@
 
 Modern ve kullanıcı dostu bir telefon satış yönetim sistemi. Bu WPF uygulaması, telefon satış işletmeleri için envanter yönetimi, satış takibi, taksit yönetimi ve finansal analiz gibi temel işlevleri sunar.
 
-![Logo](Resources/logo.jpg)
-
 ## 🚀 Temel Özellikler
 
 ### 📋 Envanter Yönetimi
